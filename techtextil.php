@@ -78,7 +78,7 @@
                                 });</script>
                             <div id="button">
                                 <span class="scali"></span>
-                                <span class="clicki"><a name="invite-btn">INVITE ME!</a></span>
+                                <span class="clicki"><a>INVITE ME!</a></span>
                             </div>
 
 
@@ -107,6 +107,5 @@ if (isset($_POST['Email'])) {
     $stmt = $conn->prepare("INSERT INTO t_techTextile_invite (email) VALUES (:email)");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
-    && (isset($_POST['invite-btn']))
 }
 ?>
