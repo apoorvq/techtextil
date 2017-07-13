@@ -64,26 +64,27 @@
                                 <span class="bar"></span>
                                 <label class="form-input">Email</label>
                             </div>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                            <script type="javascript"> $("#button").click(function (e) {
+                                    $(".scali").removeClass("animate");
+                                    if (!$(".scali").height() && !$(".scali").width()) {
+                                        var d = Math.max($("#button").outerWidth(), $("#button").outerHeight());
+                                        $(".scali").css({ height: d, width: d });
+                                    }
+                                    var x = e.pageX - $("#button").offset().left - $(".scali").width() / 2;
+                                    var y = e.pageY - $("#button").offset().top - $(".scali").height() / 2;
+                                    $(".scali").css({ top: y + 'px', left: x + 'px' }).addClass("animate");
+
+                                });</script>
+                            <div id="button">
+                                <span class="scali"></span>
+                                <span class="clicki"><a name="invite-btn">INVITE ME!</a></span>
+                            </div>
 
 
 
                         </form>
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                        <script type="javascript"> $("#button").click(function (e) {
-                                $(".scali").removeClass("animate");
-                                if (!$(".scali").height() && !$(".scali").width()) {
-                                    var d = Math.max($("#button").outerWidth(), $("#button").outerHeight());
-                                    $(".scali").css({ height: d, width: d });
-                                }
-                                var x = e.pageX - $("#button").offset().left - $(".scali").width() / 2;
-                                var y = e.pageY - $("#button").offset().top - $(".scali").height() / 2;
-                                $(".scali").css({ top: y + 'px', left: x + 'px' }).addClass("animate");
 
-                            });</script>
-                        <div id="button">
-                            <span class="scali"></span>
-                            <span class="clicki"><a>INVITE ME!</a></span>
-                        </div>
 
                     </div>
                     <div class="footer">
@@ -106,5 +107,6 @@ if (isset($_POST['Email'])) {
     $stmt = $conn->prepare("INSERT INTO t_techTextile_invite (email) VALUES (:email)");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
+    && (isset($_POST['invite-btn']))
 }
 ?>
