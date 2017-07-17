@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>texTIMZ</title>
+    <title>texTIMZ - Techtextil Invite</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="icon" href="../assets/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -53,8 +53,8 @@
             <div class = page_wrapper>
                 <div class = contact-container>
                     <div class = uote>
-                        Get Invited to the global platform generating business.<br><br>
-                        <img class="banner-txt" src="banner.jpg">
+                        International Trade Fair for Technical Textile and Non-Wovens.<br><br>
+                        <a href="http://crm-in1.messefrankfurt.com/services/vor/registration_form.aspx?exhibition_id=273"><img class="banner-txt" src="TTI_609-85px.jpg"></a>
                     </div>
                     <div class="form-container">
                         <form method="post">
